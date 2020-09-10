@@ -361,4 +361,123 @@ article.section2__article:nth-child(3) div.section2__article-content::after {
   right: 150px;
   top: -10px;
 }
-/*Rectangulo*/
+/*Color rectangulo verde*/
+.section2__article:nth-child(3) .section2__article-img {
+  background-color: #55dfb4;
+  border-radius: 5px;
+  border: 1px solid #e8e9ed;
+  height: 100%;
+  width: 40%;
+}
+
+/*Aqui falto el espacio entre el cuadrado verde y el texto*/
+
+/*Inicia la sección 3*/
+
+.section3 {
+  /*El área de padding es el espacio entre el contenido del elemento y su borde (border).(me genera el espacio de la sección 3)*/
+  padding: 50px;
+}
+.section3 .section3__container {
+  /*display flex: todos los elementos secundarios se convierten en elementos flexibles organizados en una fila, es decir Todos se estirarán para ser tan altos como el elemento más alto*/
+  display: flex;
+  /*define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor-->
+    space-evenly: los elementos se distribuyen de modo que el espacio entre los sujetos de alineación adyacentes, antes del primer sujeto de alineación y después del último sujeto de alineación sea el mismo*/
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+/*Se configura la sección del titulo "pricing"*/
+.section3 .section3__title {
+  text-align: center;
+  font: normal 36px "Raleway";
+  padding: 20px 0 50px 0;
+}
+/*se configuran las cajas de los articulos */
+.section3 .section3__article {
+  /**/
+  text-align: center;
+  border: 1px solid #fb3b64;
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 280px;
+  position: relative;
+  margin: 10px;
+}
+/*.section3 .section3__article i {
+        margin-right: 5px; }*/
+/*Se importan los colores para los check de chulo y x, la fuente se importo en el HTML*/
+.section3 .section3__article .fa-check {
+  color: #55dfb4;
+}
+.section3 .section3__article .fa-times {
+  color: #eb476e;
+}
+/*Se crea un hover en el contendor de los articulos*/
+.section3 .section3__article:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  margin-top: 30px; /*me limita la manera de ampliación del hover */
+  box-shadow: 0 0 10px #fb3b64; /* x y blur-radius color*/
+}
+/*propiedades letra contenedores*/
+.section3 .section3__article-title {
+  font: Bold 20px/1px "Raleway";
+  margin: 20px 0;
+}
+.section3 .section3__article-price {
+  font: normal 46px/140px "Open Sans";
+  padding: 30px 0;
+  color: #fb3b64;
+}
+.section3 .section3__article-offer {
+  font: Bold 12px/1px "Raleway";
+  color: #13253b;
+}
+.section3 .section3__article-list {
+  font: normal 14px/41px "Open Sans";
+  margin-top: 50px;
+  margin-bottom: 25px;
+  list-style: none;
+}
+.section3 .section3__article-btn {
+  position: absolute;
+  top: 100%;
+  
+  transform: translate(50%, -50%); /*me perite "ubicar" el boton de begin cuando se hace el hover*/
+  right: 50%;
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  border: none;
+  background: #fb3b64 0% 0% ;
+  color: #fff;
+  font: Bold 13px/41px "Open Sans";
+  cursor: pointer;
+  box-shadow: 0 0 10px #fb3b64;
+}
+/*Defino el color y algunas propiedades de los contenedores de precio*/
+/*NO defino el basic porque ya lo definí anteriormente*/
+/*Defino el professional*/
+.section3 .section3__article:nth-of-type(2) {
+  border: 1px solid #07ACE6; }
+  .section3 .section3__article:nth-of-type(2):hover {
+    box-shadow: 0 0 1em #07ACE6; }
+  .section3 .section3__article:nth-of-type(2) .section3__article-price {
+    color: #07ACE6; }
+  .section3 .section3__article:nth-of-type(2) .section3__article-btn {
+    background: #07ACE6 0% 0%; 
+    box-shadow: 0 0 10px #07ace6;
+  }
+/*Defino el premium*/
+.section3 .section3__article:last-of-type {
+  border: 1px solid #55DFB4; }
+  .section3 .section3__article:last-of-type:hover {
+    box-shadow: 0 0 1em #55DFB4; }
+  .section3 .section3__article:last-of-type .section3__article-price {
+    color: #55DFB4; }
+  .section3 .section3__article:last-of-type .section3__article-btn {
+    background: #55DFB4 0% 0% ;
+    box-shadow: 0 0 10px #55DFB4;
+  }
+  /*Inicia la sección 4*/
