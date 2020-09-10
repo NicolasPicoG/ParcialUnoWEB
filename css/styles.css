@@ -443,14 +443,17 @@ article.section2__article:nth-child(3) div.section2__article-content::after {
 .section3 .section3__article-btn {
   position: absolute;
   top: 100%;
-  
-  transform: translate(50%, -50%); /*me perite "ubicar" el boton de begin cuando se hace el hover*/
+
+  transform: translate(
+    50%,
+    -50%
+  ); /*me perite "ubicar" el boton de begin cuando se hace el hover*/
   right: 50%;
   width: 150px;
   height: 50px;
   border-radius: 23px;
   border: none;
-  background: #fb3b64 0% 0% ;
+  background: #fb3b64 0% 0%;
   color: #fff;
   font: Bold 13px/41px "Open Sans";
   cursor: pointer;
@@ -460,24 +463,180 @@ article.section2__article:nth-child(3) div.section2__article-content::after {
 /*NO defino el basic porque ya lo definí anteriormente*/
 /*Defino el professional*/
 .section3 .section3__article:nth-of-type(2) {
-  border: 1px solid #07ACE6; }
-  .section3 .section3__article:nth-of-type(2):hover {
-    box-shadow: 0 0 1em #07ACE6; }
-  .section3 .section3__article:nth-of-type(2) .section3__article-price {
-    color: #07ACE6; }
-  .section3 .section3__article:nth-of-type(2) .section3__article-btn {
-    background: #07ACE6 0% 0%; 
-    box-shadow: 0 0 10px #07ace6;
-  }
+  border: 1px solid #07ace6;
+}
+.section3 .section3__article:nth-of-type(2):hover {
+  box-shadow: 0 0 1em #07ace6;
+}
+.section3 .section3__article:nth-of-type(2) .section3__article-price {
+  color: #07ace6;
+}
+.section3 .section3__article:nth-of-type(2) .section3__article-btn {
+  background: #07ace6 0% 0%;
+  box-shadow: 0 0 10px #07ace6;
+}
 /*Defino el premium*/
 .section3 .section3__article:last-of-type {
-  border: 1px solid #55DFB4; }
-  .section3 .section3__article:last-of-type:hover {
-    box-shadow: 0 0 1em #55DFB4; }
-  .section3 .section3__article:last-of-type .section3__article-price {
-    color: #55DFB4; }
-  .section3 .section3__article:last-of-type .section3__article-btn {
-    background: #55DFB4 0% 0% ;
-    box-shadow: 0 0 10px #55DFB4;
-  }
-  /*Inicia la sección 4*/
+  border: 1px solid #55dfb4;
+}
+.section3 .section3__article:last-of-type:hover {
+  box-shadow: 0 0 1em #55dfb4;
+}
+.section3 .section3__article:last-of-type .section3__article-price {
+  color: #55dfb4;
+}
+.section3 .section3__article:last-of-type .section3__article-btn {
+  background: #55dfb4 0% 0%;
+  box-shadow: 0 0 10px #55dfb4;
+}
+/*Inicia la sección 4*/
+/*Se configuran las propiedades de la sección 4*/
+.section4__email {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 100px auto;
+}
+.section4__email .email-footer-cont {
+  display: inline-block;
+  margin-right: 10px;
+}
+.section4__email .section4__emailLeftsite {
+  width: 50%;
+}
+.section4__email .section4__emailLeftsite img {
+  position: relative;
+  top: 0.5em;
+}
+.section4__email .section4__emailLeftsite span {
+  display: inline-table;
+  font: 500 16px/22px "Open Sans";
+  color: #a5a5a5;
+}
+.section4__email .section4__emailRightsite {
+  width: 50%;
+  margin: 0 40px;
+}
+.section4__email .section4__emailRightsite label {
+  font: Bold 11px/15px "Open Sans";
+  text-transform: uppercase;
+  color: #08a6e4;
+  letter-spacing: 2px;
+}
+
+.section4__email .section4__emailRightsite input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #95989a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  color: #707070;
+}
+
+.section4__email .section4__emailRightsite .section4__emailRightsite-input {
+  width: 100%;
+}
+.section4__email .section4__emailRightsite span {
+  font: normal 12px/17px "Open Sans";
+}
+.section4__email .section4__email-title {
+  font: normal 49px/59px "Raleway";
+}
+.section4__email .section4__email-text {
+  font: normal 16px/22px "Open Sans";
+  padding: 15px 0 25px 0;
+}
+.section4__email .section4__formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.section4__email .section4__formContainer input {
+  padding: 20px;
+  display: none;
+}
+/*se crea el diseño del botón*/
+.section4__email .section4__emailRightsite-btn {
+  width: 225px;
+  height: 55px;
+  position: absolute;
+  right: 0;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  background: #08a6e4;
+  font: 700 13px/18px "Open Sans";
+  cursor: pointer;
+  margin-top: 2rem;
+}
+/*Ubicación del boton*/
+.section4__email .section4__emailRightsite {
+  position: relative;
+}
+
+/*Se crean los bordes que van a contener toda la información*/
+.section4__email .section4__formContainer input[type="checkbox"] + label {
+  position: relative;
+  padding: 25px;
+}
+/*Creo el contenedor para el check*/
+.section4__email
+  .section4__formContainer
+  input[type="checkbox"]
+  + label:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 25;
+  left: 0;
+  cursor: pointer;
+  border: 2px solid #cccccc;
+  border-radius: 6px;
+}
+/*Creo las propuedades para el check*/
+.section4__email
+  .section4__formContainer input[type="checkbox"]:checked + label:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #08a6e4;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+}
+/*Propiedades span*/
+.section4__email .section4__formContainer span {
+  font: normal 12px/12px "Open Sans";
+  color: #707070;
+}
+
+
+
+/*Se crea el footer o sección 5*/
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  box-shadow: 0px -5px 40px #00000029;
+  height: 90px;
+}
+
+.footer__container p {
+  font: normal 11px/15px "Open Sans";
+  color: #a5a5a5;
+}
+.footer__container .footer__logo a {
+  font: lighter 26px/31px "Raleway";
+  color: #08a6e4;
+  text-decoration: none;
+}
+.footer__container .footer__logo , .footer__container .footer__icons {
+  padding: 0 100px;
+}
+
