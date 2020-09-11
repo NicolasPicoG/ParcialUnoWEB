@@ -47,8 +47,12 @@
   align-items: center;
   white-space: nowrap;/*La propiedad white-space determina cómo se maneja el espacio en blanco dentro de un elemento.*/
 }
-
-
+/*Me organiza el espacio entre los 5 modulos de la barra de menu*/
+.header__navList li {
+  display: flex;
+  height: 100%;
+  letter-spacing: 3.28px;
+  padding-right: 135px;
 }
 /*barra azul en la barra de menu con el :hover se logra que haya la linea sebaho despues de seleccionar algun modulo*/
 .header__navListAnchor:hover {
