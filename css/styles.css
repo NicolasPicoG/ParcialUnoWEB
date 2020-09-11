@@ -47,7 +47,11 @@
   align-items: center;
   white-space: nowrap;/*La propiedad white-space determina cómo se maneja el espacio en blanco dentro de un elemento.*/
 }
-/*Me organiza el espacio entre los 5 modulos de la barra de menu*/
+
+a.header__navListAnchor:nth-of-type(4) {
+  padding-right: 0;
+}
+
 .header__navList li {
   display: flex;
   height: 100%;
