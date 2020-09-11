@@ -1,9 +1,14 @@
-/* Barra menu */
+:root {
+  --blanco:#ffffff;
+  --blancoHueso: #F7F7F7;
+  --sombra:  #00000029;
+  --rojo: #FB3B64;
+  --verde:#55DFB4;
+  --azul:#08A6E4;
+  --gris:#A5A5A5;  
 
-* {
-  margin: 0;
-  padding: 0;
 }
+/* Barra menu */
 
 .header {
   top: 0px;
@@ -11,24 +16,23 @@
   width: 100%;
   height: 70px;
   background: #ffffff;
-  box-shadow: 0px 3px 1px #00000029;
+  box-shadow: 0px 3px 1px var(--sombra);
   opacity: 1;
-  position: fixed;
-  z-index: 50;
+  position: fixed; /*Esto me permite colocar la barra fija*/
+  z-index: 50;/*z-indez es una propiedad que indica el orden de un elemento posicionado*/
 }
-
-.header__nav,
-.header__navList {
+/*Me organiza los 5 modulos*/
+.header__nav,.header__navList {
   display: flex;
   align-items: center;
   height: 70px;
-  justify-content: space-between;
+  justify-content: space-between;/*El espaciamiento se hace de tal corma que el espacio adyacente entre dos items es el mismo*/
 }
 
 .header__navList {
   list-style: none;
-  text-transform: uppercase;
-  font: Bold 11px/15px "Open Sans";
+  text-transform: uppercase;/*escribe todos los modulos en mayuscula*/
+  font: Bold 11px "Open Sans";
   text-align: center;
   height: 100%;
 }
@@ -54,13 +58,9 @@ a.header__navListAnchor:nth-of-type(4) {
   letter-spacing: 3.28px;
   padding-right: 135px;
 }
-/*sombra azul en la barra de menu*/
+/*barra azul en la barra de menu con el :hover se logra que haya la linea sebaho despues de seleccionar algun modulo*/
 .header__navListAnchor:hover {
   border-bottom: 4px solid #08a6e4;
-}
-
-.nav_bigAnchor {
-  color: #000;
 }
 
 a.header__navSpanAnchor {
@@ -443,11 +443,8 @@ article.section2__article:nth-child(3) div.section2__article-content::after {
 .section3 .section3__article-btn {
   position: absolute;
   top: 100%;
-
-  transform: translate(
-    50%,
-    -50%
-  ); /*me perite "ubicar" el boton de begin cuando se hace el hover*/
+/*me perite "ubicar" el boton de begin cuando se hace el hover*/
+  transform: translate(50%,-50% ); 
   right: 50%;
   width: 150px;
   height: 50px;
