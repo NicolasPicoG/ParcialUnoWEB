@@ -28,7 +28,7 @@
   height: 70px;
   justify-content: space-between;/*El espaciamiento se hace de tal corma que el espacio adyacente entre dos items es el mismo*/
 }
-
+/*Porpiedades del texto en los cinco modulos*/
 .header__navList {
   list-style: none;
   text-transform: uppercase;/*escribe todos los modulos en mayuscula*/
@@ -45,24 +45,16 @@
   height: 100%;
   display: flex;
   align-items: center;
-  white-space: nowrap;
+  white-space: nowrap;/*La propiedad white-space determina cómo se maneja el espacio en blanco dentro de un elemento.*/
 }
 
-a.header__navListAnchor:nth-of-type(4) {
-  padding-right: 0;
-}
 
-.header__navList li {
-  display: flex;
-  height: 100%;
-  letter-spacing: 3.28px;
-  padding-right: 135px;
 }
 /*barra azul en la barra de menu con el :hover se logra que haya la linea sebaho despues de seleccionar algun modulo*/
 .header__navListAnchor:hover {
   border-bottom: 4px solid #08a6e4;
 }
-
+/*Se definen algunas propiedades de la bara*/
 a.header__navSpanAnchor {
   text-transform: none;
   letter-spacing: 0;
